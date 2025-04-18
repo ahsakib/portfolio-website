@@ -26,32 +26,32 @@ export default function ContactSection() {
   }
 
   return (
-    <section id="contact" className="py-20 bg-[#0a1120]/50 relative overflow-hidden">
+    <section id="contact" className="py-16 md:py-20 bg-[#0a1120]/50 relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/5 rounded-full filter blur-3xl animate-pulse-slow"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl animate-pulse-slow animation-delay-2000"></div>
       <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl animate-pulse-slow animation-delay-1000"></div>
 
-      {/* Animated geometric shapes */}
-      <div className="absolute top-20 right-40 w-20 h-20 border border-green-500/10 transform rotate-45 animate-float animation-delay-1000"></div>
-      <div className="absolute bottom-20 left-40 w-16 h-16 border border-blue-500/10 rounded-full animate-float animation-delay-1500"></div>
+      {/* Animated geometric shapes - hidden on mobile */}
+      <div className="absolute top-20 right-40 w-20 h-20 border border-green-500/10 transform rotate-45 animate-float animation-delay-1000 hidden md:block"></div>
+      <div className="absolute bottom-20 left-40 w-16 h-16 border border-blue-500/10 rounded-full animate-float animation-delay-1500 hidden md:block"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h3 className="text-sm text-gray-400 mb-2 animate-slideUp">CONTACT</h3>
-          <h2 className="text-3xl font-bold mb-4 animate-slideUp animation-delay-500">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 animate-slideUp animation-delay-500">
             Get In <span className="text-gradient">Touch</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto animate-fadeIn animation-delay-1000">
+          <p className="text-gray-400 max-w-2xl mx-auto animate-fadeIn animation-delay-1000 text-sm sm:text-base">
             I'm always open to new opportunities and collaborations. Feel free to reach out if you have a project in
             mind or just want to say hello!
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-5xl mx-auto">
-          <div className="animate-fadeIn animation-delay-1000">
-            <div className="card-glass p-8 rounded-xl border border-green-500/10 h-full">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 max-w-5xl mx-auto">
+          <div className="animate-fadeIn animation-delay-1000 order-2 md:order-1">
+            <div className="card-glass p-6 md:p-8 rounded-xl border border-green-500/10 h-full">
+              <h3 className="text-lg md:text-xl font-semibold mb-6 flex items-center">
                 <span className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -70,18 +70,18 @@ export default function ContactSection() {
                 </span>
                 Contact Information
               </h3>
-              <p className="text-gray-300 mb-8">
+              <p className="text-gray-300 mb-8 text-sm sm:text-base">
                 Feel free to reach out to me through any of the following methods. I'm always excited to connect with
                 new people and discuss potential collaborations.
               </p>
 
-              <div className="space-y-8">
+              <div className="space-y-6 md:space-y-8">
                 <div className="flex items-center gap-4 group hover-lift p-3 rounded-lg transition-all duration-300 hover:bg-green-500/5">
-                  <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -93,19 +93,22 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Phone</p>
-                    <a href="tel:+8801824630876" className="text-gray-200 hover:text-green-500 transition-colors">
+                    <p className="text-gray-400 text-xs md:text-sm">Phone</p>
+                    <a
+                      href="tel:+8801824630876"
+                      className="text-gray-200 hover:text-green-500 transition-colors text-sm md:text-base"
+                    >
                       +8801824630876
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-center gap-4 group hover-lift p-3 rounded-lg transition-all duration-300 hover:bg-green-500/5">
-                  <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -118,10 +121,10 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Email</p>
+                    <p className="text-gray-400 text-xs md:text-sm">Email</p>
                     <a
                       href="mailto:ahshakib572@gmail.com"
-                      className="text-gray-200 hover:text-green-500 transition-colors"
+                      className="text-gray-200 hover:text-green-500 transition-colors text-sm md:text-base break-all"
                     >
                       ahshakib572@gmail.com
                     </a>
@@ -129,11 +132,11 @@ export default function ContactSection() {
                 </div>
 
                 <div className="flex items-center gap-4 group hover-lift p-3 rounded-lg transition-all duration-300 hover:bg-green-500/5">
-                  <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
+                  <div className="w-10 h-10 md:w-12 md:h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500/20 transition-all duration-300">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="20"
-                      height="20"
+                      width="18"
+                      height="18"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -146,23 +149,23 @@ export default function ContactSection() {
                     </svg>
                   </div>
                   <div>
-                    <p className="text-gray-400 text-sm">Address</p>
-                    <p className="text-gray-200">Dhaka, Bangladesh</p>
+                    <p className="text-gray-400 text-xs md:text-sm">Address</p>
+                    <p className="text-gray-200 text-sm md:text-base">Dhaka, Bangladesh</p>
                   </div>
                 </div>
               </div>
 
-              <div className="mt-10">
-                <h4 className="text-gray-300 mb-4">Find me on</h4>
+              <div className="mt-8 md:mt-10">
+                <h4 className="text-gray-300 mb-4 text-sm md:text-base">Find me on</h4>
                 <div className="flex gap-4">
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -175,12 +178,12 @@ export default function ContactSection() {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -195,12 +198,12 @@ export default function ContactSection() {
                   </a>
                   <a
                     href="#"
-                    className="w-10 h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
+                    className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                   >
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
-                      width="18"
-                      height="18"
+                      width="16"
+                      height="16"
                       viewBox="0 0 24 24"
                       fill="none"
                       stroke="currentColor"
@@ -218,9 +221,9 @@ export default function ContactSection() {
             </div>
           </div>
 
-          <div className="animate-fadeIn animation-delay-1500">
-            <div className="card-glass p-8 rounded-xl border border-green-500/10">
-              <h3 className="text-xl font-semibold mb-6 flex items-center">
+          <div className="animate-fadeIn animation-delay-1500 order-1 md:order-2">
+            <div className="card-glass p-6 md:p-8 rounded-xl border border-green-500/10">
+              <h3 className="text-lg md:text-xl font-semibold mb-6 flex items-center">
                 <span className="w-8 h-8 rounded-full bg-green-500/20 flex items-center justify-center mr-3">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -240,7 +243,7 @@ export default function ContactSection() {
                 </span>
                 Send Me a Message
               </h3>
-              <form onSubmit={handleSubmit} className="space-y-6">
+              <form onSubmit={handleSubmit} className="space-y-4 md:space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                   <div>
                     <input
@@ -249,7 +252,7 @@ export default function ContactSection() {
                       value={formData.name}
                       onChange={handleChange}
                       placeholder="Name"
-                      className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300"
+                      className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300 text-sm"
                       required
                     />
                   </div>
@@ -260,7 +263,7 @@ export default function ContactSection() {
                       value={formData.email}
                       onChange={handleChange}
                       placeholder="Email"
-                      className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300"
+                      className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300 text-sm"
                       required
                     />
                   </div>
@@ -273,7 +276,7 @@ export default function ContactSection() {
                     value={formData.subject}
                     onChange={handleChange}
                     placeholder="Subject"
-                    className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300"
+                    className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300 text-sm"
                     required
                   />
                 </div>
@@ -284,14 +287,14 @@ export default function ContactSection() {
                     value={formData.message}
                     onChange={handleChange}
                     placeholder="Message"
-                    className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white min-h-[150px] transition-all duration-300"
+                    className="w-full bg-[#0f1a2b]/70 border border-green-500/10 focus:border-green-500 rounded-lg px-4 py-3 text-white transition-all duration-300 text-sm min-h-[120px] md:min-h-[150px]"
                     required
                   ></textarea>
                 </div>
 
                 <button
                   type="submit"
-                  className="bg-green-500 hover:bg-green-600 text-black w-full px-6 py-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-glow"
+                  className="bg-green-500 hover:bg-green-600 text-black w-full px-5 sm:px-6 py-2 sm:py-3 rounded-lg flex items-center justify-center gap-2 transition-all duration-300 transform hover:scale-105 hover:shadow-glow text-sm md:text-base"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"

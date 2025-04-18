@@ -97,31 +97,32 @@ export default function ProjectsSection() {
   const filteredProjects = projects.filter((project) => project.category === activeCategory)
 
   return (
-    <section id="portfolio" ref={sectionRef} className="py-20 bg-[#0a1120] relative overflow-hidden">
+    <section id="portfolio" ref={sectionRef} className="py-16 md:py-20 bg-[#0a1120] relative overflow-hidden">
       {/* Enhanced background elements */}
       <div className="absolute top-0 right-0 w-96 h-96 bg-green-500/5 rounded-full filter blur-3xl animate-pulse-slow"></div>
       <div className="absolute bottom-0 left-0 w-80 h-80 bg-blue-500/5 rounded-full filter blur-3xl animate-pulse-slow animation-delay-2000"></div>
       <div className="absolute top-1/3 left-1/2 w-64 h-64 bg-purple-500/5 rounded-full filter blur-3xl animate-pulse-slow animation-delay-1000"></div>
 
-      {/* Animated geometric shapes */}
-      <div className="absolute top-40 left-20 w-24 h-24 border border-green-500/10 transform rotate-12 animate-float animation-delay-500"></div>
-      <div className="absolute bottom-40 right-20 w-32 h-32 border border-blue-500/10 rounded-lg transform -rotate-12 animate-float animation-delay-1500"></div>
+      {/* Animated geometric shapes - hidden on mobile */}
+      <div className="absolute top-40 left-20 w-24 h-24 border border-green-500/10 transform rotate-12 animate-float animation-delay-500 hidden md:block"></div>
+      <div className="absolute bottom-40 right-20 w-32 h-32 border border-blue-500/10 rounded-lg transform -rotate-12 animate-float animation-delay-1500 hidden md:block"></div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
+        <div className="text-center mb-8 md:mb-12">
           <h3 className="text-sm text-gray-400 mb-2 animate-slideUp">PORTFOLIO</h3>
-          <h2 className="text-3xl font-bold mb-4 animate-slideUp animation-delay-500">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 animate-slideUp animation-delay-500">
             My <span className="text-gradient">Projects</span>
           </h2>
-          <p className="text-gray-400 max-w-2xl mx-auto animate-fadeIn animation-delay-1000">
+          <p className="text-gray-400 max-w-2xl mx-auto animate-fadeIn animation-delay-1000 text-sm sm:text-base">
             Here are some of my recent projects. Each project represents a unique challenge and solution that I've
             worked on.
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-3 mb-12 animate-fadeIn animation-delay-1000">
+        {/* Scrollable category tabs on mobile */}
+        <div className="flex flex-nowrap justify-start md:justify-center gap-2 md:gap-3 mb-8 md:mb-12 animate-fadeIn animation-delay-1000 overflow-x-auto pb-2 hide-scrollbar">
           <button
-            className={`px-5 py-2 rounded-full transition-all duration-300 ${
+            className={`px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
               activeCategory === "web"
                 ? "bg-green-500 text-black shadow-glow"
                 : "border border-green-500/30 text-gray-300 hover:bg-green-500/10"
@@ -131,7 +132,7 @@ export default function ProjectsSection() {
             Web Projects
           </button>
           <button
-            className={`px-5 py-2 rounded-full transition-all duration-300 ${
+            className={`px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
               activeCategory === "others"
                 ? "bg-green-500 text-black shadow-glow"
                 : "border border-green-500/30 text-gray-300 hover:bg-green-500/10"
@@ -143,7 +144,7 @@ export default function ProjectsSection() {
         </div>
 
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 transition-opacity duration-300 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
+          className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-8 transition-opacity duration-300 ${isTransitioning ? "opacity-0" : "opacity-100"}`}
         >
           {filteredProjects.map((project, index) => (
             <div
@@ -153,7 +154,7 @@ export default function ProjectsSection() {
               } ${project.featured ? "ring-1 ring-green-500/20" : ""}`}
               style={{ animationDelay: `${index * 150}ms` }}
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <img
                   src={project.image || "/placeholder.svg"}
                   alt={project.title}
@@ -209,11 +210,11 @@ export default function ProjectsSection() {
                   </a>
                 </div>
               </div>
-              <div className="p-6">
-                <h3 className="text-xl font-semibold mb-2 text-white group-hover:text-green-500 transition-colors">
+              <div className="p-4 md:p-6">
+                <h3 className="text-lg md:text-xl font-semibold mb-2 text-white group-hover:text-green-500 transition-colors">
                   {project.title}
                 </h3>
-                <div className="text-gray-400 text-sm mb-4 flex flex-wrap gap-2">
+                <div className="text-gray-400 text-xs md:text-sm mb-3 md:mb-4 flex flex-wrap gap-2">
                   {project.technologies.map((tech, techIndex) => (
                     <span
                       key={techIndex}
@@ -223,7 +224,7 @@ export default function ProjectsSection() {
                     </span>
                   ))}
                 </div>
-                <p className="text-gray-300 text-sm mb-6">{project.description}</p>
+                <p className="text-gray-300 text-xs md:text-sm mb-4 md:mb-6">{project.description}</p>
                 <div className="flex gap-4">
                   <a
                     href="#"
@@ -273,10 +274,10 @@ export default function ProjectsSection() {
           ))}
         </div>
 
-        <div className="text-center mt-12">
+        <div className="text-center mt-8 md:mt-12">
           <a
             href="#"
-            className="inline-flex items-center gap-2 border border-green-500 text-green-500 hover:bg-green-500/10 px-6 py-3 rounded-full transition-all duration-300 transform hover:scale-105 group"
+            className="inline-flex items-center gap-2 border border-green-500 text-green-500 hover:bg-green-500/10 px-5 sm:px-6 py-2 sm:py-3 rounded-full transition-all duration-300 transform hover:scale-105 group"
           >
             View All Projects
             <svg

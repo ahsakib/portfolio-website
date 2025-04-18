@@ -1,6 +1,6 @@
 export default function Footer() {
     return (
-      <footer className="py-8 bg-[#0a1120] border-t border-green-500/10 relative overflow-hidden">
+      <footer className="py-6 md:py-8 bg-[#0a1120] border-t border-green-500/10 relative overflow-hidden">
         {/* Background elements */}
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-green-500/5 to-transparent"></div>
   
@@ -8,7 +8,7 @@ export default function Footer() {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="mb-4 md:mb-0">
               <a href="#" className="flex items-center group">
-                <div className="h-10 w-10 rounded-full bg-green-500 flex items-center justify-center text-black font-bold transition-all duration-300 group-hover:shadow-glow">
+                <div className="h-8 w-8 md:h-10 md:w-10 rounded-full bg-green-500 flex items-center justify-center text-black font-bold transition-all duration-300 group-hover:shadow-glow">
                   A
                 </div>
                 <span className="ml-2 text-white font-semibold">Anowar Shakib</span>
@@ -16,7 +16,7 @@ export default function Footer() {
             </div>
   
             <div className="text-center md:text-left mb-4 md:mb-0">
-              <p className="text-gray-400">© {new Date().getFullYear()} All Rights Reserved</p>
+              <p className="text-gray-400 text-sm">© {new Date().getFullYear()} All Rights Reserved</p>
             </div>
   
             <div className="flex gap-4">
@@ -87,8 +87,8 @@ export default function Footer() {
             </div>
           </div>
   
-          <div className="mt-6 pt-6 border-t border-green-500/10 text-center">
-            <p className="text-gray-500 text-sm">
+          <div className="mt-4 md:mt-6 pt-4 md:pt-6 border-t border-green-500/10 text-center">
+            <p className="text-gray-500 text-xs md:text-sm">
               Designed & Built with <span className="text-green-500">♥</span> by Anowar Shakib
             </p>
           </div>

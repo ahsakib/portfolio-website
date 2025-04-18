@@ -413,3 +413,32 @@
 html {
   scroll-behavior: smooth;
 }
+
+/* Hide scrollbar but allow scrolling */
+.hide-scrollbar {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari and Opera */
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+  .text-gradient {
+    background-size: 150% auto;
+  }
+
+  .card-glass {
+    backdrop-filter: blur(5px);
+  }
+
+  .animate-float {
+    animation-duration: 4s;
+  }
+
+  .animate-pulse-slow {
+    animation-duration: 4s;
+  }
+}
