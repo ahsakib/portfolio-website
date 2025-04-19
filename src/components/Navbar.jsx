@@ -19,10 +19,11 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  // Close menu when clicking outside
   useEffect(() => {
     const handleClickOutside = (event) => {
-      if (isMenuOpen && !event.target.closest(".mobile-menu-container")) {
+      if (isMenuOpen && 
+          !event.target.closest(".mobile-menu-container") && 
+          !event.target.closest(".burger-menu")) {
         setIsMenuOpen(false)
       }
     }
@@ -31,27 +32,24 @@ export default function Navbar() {
     return () => document.removeEventListener("mousedown", handleClickOutside)
   }, [isMenuOpen])
 
-  // Prevent body scroll when mobile menu is open
   useEffect(() => {
-    if (isMenuOpen) {
-      document.body.style.overflow = "hidden"
-    } else {
-      document.body.style.overflow = "auto"
-    }
-
-    return () => {
-      document.body.style.overflow = "auto"
-    }
+    document.body.style.overflow = isMenuOpen ? "hidden" : "auto"
+    return () => { document.body.style.overflow = "auto" }
   }, [isMenuOpen])
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled ? "bg-[#0a1120]/90 backdrop-blur-md shadow-lg py-3" : "bg-transparent py-5"
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 py-3${
+        isMenuOpen
+          ? "bg-transparent py-5"
+          : scrolled
+          ? "bg-[#0a1120]/90 backdrop-blur-md shadow-lg py-3"
+          : ""
       }`}
+      
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="#" className="flex items-center group z-20">
+        <a href="#heroSection" className="flex items-center group z-20">
           <div className="h-10 w-10 rounded-full bg-green-500 flex items-center justify-center text-black font-bold transition-all duration-300 group-hover:shadow-glow">
             A
           </div>
@@ -84,7 +82,12 @@ export default function Navbar() {
             BLOG
           </a>
           <a
-            href="#resume"
+              href="#"
+              onClick={(e) => {
+                e.preventDefault(); 
+                window.open("/pdf/shakib_cv.pdf", "_blank"); 
+              }}
+            
             className="bg-green-500 hover:bg-green-600 text-black px-5 py-2 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow"
           >
             RESUME
@@ -147,9 +150,13 @@ export default function Navbar() {
             BLOG
           </a>
           <a
-            href="#resume"
+            href="#"
+            onClick={(e) => {
+                () => setIsMenuOpen(false)
+              e.preventDefault(); 
+              window.open("/pdf/shakib_cv.pdf", "_blank"); 
+            }}
             className="bg-green-500 hover:bg-green-600 text-black px-8 py-3 rounded-md transition-all duration-300 text-center mt-4 transform hover:scale-105"
-            onClick={() => setIsMenuOpen(false)}
           >
             RESUME
           </a>

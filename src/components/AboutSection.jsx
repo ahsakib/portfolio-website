@@ -67,7 +67,7 @@ export default function AboutSection() {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto aspect-square overflow-hidden rounded-2xl border-2 border-green-500/20 p-2 hover:border-green-500/50 transition-all duration-700">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/10 rounded-2xl transform group-hover:scale-105 transition-all duration-700"></div>
               <img
-                src="/placeholder.svg?height=400&width=400"
+                src="/public/images/my_pic.jpg"
                 alt="Anowar Shakib"
                 className="rounded-xl object-cover w-full h-full relative z-10 transform group-hover:scale-[1.02] transition-all duration-700 filter saturate-[1.1] contrast-[1.1]"
               />
@@ -79,10 +79,10 @@ export default function AboutSection() {
               <div className="absolute bottom-0 right-0 w-10 h-10 border-b-2 border-r-2 border-green-500 rounded-br-lg z-20 animate-border-flow animation-delay-1500"></div>
 
               {/* Enhanced floating badges with 3D effect */}
-              <div className="absolute -top-3 -right-3 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-glow z-30 animate-float transform hover:rotate-12 transition-transform duration-300">
+              <div className="absolute -top-0.5 -right-2 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-glow z-30 animate-float transform hover:rotate-12 transition-transform duration-300">
                 Laravel
               </div>
-              <div className="absolute -bottom-3 -left-3 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-glow z-30 animate-float animation-delay-1000 transform hover:rotate-12 transition-transform duration-300">
+              <div className="absolute -bottom-3 -left-1.5 bg-green-500 text-black text-xs font-bold px-3 py-1 rounded-full shadow-glow z-30 animate-float animation-delay-1000 transform hover:rotate-12 transition-transform duration-300">
                 React
               </div>
             </div>
@@ -90,7 +90,7 @@ export default function AboutSection() {
             {/* Enhanced experience badge with 3D effect */}
             <div className="absolute -bottom-6 right-1/4 bg-[#0f1a2b] border border-green-500/20 rounded-xl px-4 py-3 shadow-xl z-30 transform rotate-3 hover:rotate-0 transition-all duration-300 hover:shadow-glow">
               <div className="text-center">
-                <span className="block text-3xl font-bold text-green-500 counter">2+</span>
+                <span className="block text-3xl font-bold text-green-500 counter">3+</span>
                 <span className="text-xs text-gray-400">Years Experience</span>
               </div>
             </div>
@@ -100,7 +100,7 @@ export default function AboutSection() {
           <div className="w-full md:w-7/12">
             <h3 className="text-sm text-gray-400 mb-2 animate-slideUp">ABOUT ME</h3>
             <h2 className="text-2xl sm:text-3xl font-bold mb-6 animate-slideUp animation-delay-500">
-              Junior Laravel & React Developer
+               Laravel & React Developer
             </h2>
 
             {/* Enhanced tab navigation with animated indicator - scrollable on mobile */}
@@ -142,7 +142,7 @@ export default function AboutSection() {
                 }`}
               >
                 <p className="text-gray-300 mb-4 text-sm sm:text-base">
-                  I'm a passionate Junior Laravel & React Developer with 2+ years of experience building web
+                  I'm a passionate Junior Laravel & React Developer with 3+ years of experience building web
                   applications. I specialize in creating responsive, user-friendly interfaces and robust backend
                   systems.
                 </p>
@@ -183,7 +183,12 @@ export default function AboutSection() {
                   </div>
                 </div>
 
-                <button className="bg-green-500 hover:bg-green-600 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow flex items-center gap-2 group">
+                <button 
+                  onClick={(e) => {
+                    e.preventDefault(); 
+                    window.open("/pdf/shakib_cv.pdf", "_blank"); 
+                  }}
+                className="bg-green-500 hover:bg-green-600 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow flex items-center gap-2 group">
                   Download CV
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -215,13 +220,13 @@ export default function AboutSection() {
                   <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-500 -translate-x-1/2 shadow-glow group-hover:scale-125 transition-transform"></div>
                   <div className="mb-1">
                     <span className="text-xs text-green-500 font-semibold bg-green-500/10 px-2 py-1 rounded">
-                      2018 - 2022
+                      2020 - 2024
                     </span>
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-green-500 transition-colors">
                     BSc in Computer Science & Engineering
                   </h4>
-                  <p className="text-gray-400 text-sm">Daffodil International University</p>
+                  <p className="text-gray-400 text-sm">World University Of Bangladesh</p>
                   <p className="text-gray-300 mt-2 text-sm">
                     Completed my bachelor's degree with a focus on web development and software engineering.
                   </p>
@@ -231,13 +236,13 @@ export default function AboutSection() {
                   <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-500 -translate-x-1/2 shadow-glow group-hover:scale-125 transition-transform"></div>
                   <div className="mb-1">
                     <span className="text-xs text-green-500 font-semibold bg-green-500/10 px-2 py-1 rounded">
-                      2015 - 2017
+                      2017 - 2019
                     </span>
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-green-500 transition-colors">
                     Higher Secondary Certificate
                   </h4>
-                  <p className="text-gray-400 text-sm">Govt. Shaheed Bulbul College</p>
+                  <p className="text-gray-400 text-sm">Govt. Science College</p>
                   <p className="text-gray-300 mt-2 text-sm">
                     Completed HSC with Science background and excellent academic performance.
                   </p>
@@ -255,13 +260,13 @@ export default function AboutSection() {
                   <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-500 -translate-x-1/2 shadow-glow group-hover:scale-125 transition-transform"></div>
                   <div className="mb-1">
                     <span className="text-xs text-green-500 font-semibold bg-green-500/10 px-2 py-1 rounded">
-                      2022 - Present
+                      May  2023 - Present
                     </span>
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-green-500 transition-colors">
-                    Junior Laravel & React Developer
+                    Laravel & React Developer
                   </h4>
-                  <p className="text-gray-400 text-sm">Droptienda Ltd.</p>
+                  <p className="text-gray-400 text-sm">Luminous Labs</p>
                   <p className="text-gray-300 mt-2 text-sm">
                     Working on e-commerce platforms and CMS solutions using Laravel, React, and related technologies.
                   </p>
@@ -271,7 +276,7 @@ export default function AboutSection() {
                   <div className="absolute left-0 top-0 w-4 h-4 rounded-full bg-green-500 -translate-x-1/2 shadow-glow group-hover:scale-125 transition-transform"></div>
                   <div className="mb-1">
                     <span className="text-xs text-green-500 font-semibold bg-green-500/10 px-2 py-1 rounded">
-                      2021 - 2022
+                      2022 - 2023
                     </span>
                   </div>
                   <h4 className="text-lg sm:text-xl font-semibold text-white mb-1 group-hover:text-green-500 transition-colors">

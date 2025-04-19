@@ -9,9 +9,8 @@ export default function SkillsSection() {
   const [isInView, setIsInView] = useState(false)
 
   const skills = [
-    { name: "JavaScript", percentage: 85, category: "web" },
+    { name: "JavaScript", percentage: 90, category: "web" },
     { name: "React.js", percentage: 90, category: "web" },
-    { name: "Next.js", percentage: 75, category: "web" },
     { name: "jQuery", percentage: 80, category: "web" },
     { name: "Tailwind CSS", percentage: 90, category: "web" },
     { name: "Bootstrap", percentage: 85, category: "web" },
@@ -21,7 +20,6 @@ export default function SkillsSection() {
     { name: "RESTful API", percentage: 85, category: "programming" },
     { name: "Git", percentage: 78, category: "tools" },
     { name: "VS Code", percentage: 90, category: "tools" },
-    { name: "Figma", percentage: 70, category: "tools" },
     { name: "Postman", percentage: 85, category: "tools" },
     { name: "English", percentage: 80, category: "others" },
     { name: "Teamwork", percentage: 95, category: "others" },
@@ -118,7 +116,7 @@ export default function SkillsSection() {
             }`}
             onClick={() => setActiveCategory("programming")}
           >
-            Programming
+            Backend & Programming
           </button>
           <button
             className={`px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
@@ -128,7 +126,7 @@ export default function SkillsSection() {
             }`}
             onClick={() => setActiveCategory("tools")}
           >
-            Tools
+            Tools & Utilities
           </button>
           <button
             className={`px-4 py-2 rounded-full transition-all duration-300 whitespace-nowrap ${
@@ -138,7 +136,7 @@ export default function SkillsSection() {
             }`}
             onClick={() => setActiveCategory("others")}
           >
-            Soft Skills
+            Soft Skills & Other
           </button>
         </div>
 

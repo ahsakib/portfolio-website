@@ -424,6 +424,22 @@ html {
   display: none; /* Chrome, Safari and Opera */
 }
 
+.mobile-menu-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(10, 17, 32, 0.95);
+  backdrop-filter: blur(10px);
+  transition: all 0.5s ease-in-out;
+}
+
+.mobile-menu-container:not(.visible) {
+  pointer-events: none;
+}
+
 /* Mobile optimizations */
 @media (max-width: 768px) {
   .text-gradient {
@@ -440,5 +456,19 @@ html {
 
   .animate-pulse-slow {
     animation-duration: 4s;
+  }
+}
+
+/* Media query to hide scroll indicator on mobile */
+@media (max-width: 767px) {
+  .scroll-indicator {
+    display: none;
+  }
+}
+
+/* Media query to show scroll indicator on tablets and larger screens */
+@media (min-width: 768px) {
+  .scroll-indicator {
+    display: flex;
   }
 }

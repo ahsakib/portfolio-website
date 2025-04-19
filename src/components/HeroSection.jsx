@@ -12,11 +12,12 @@ export default function HeroSection() {
 
   const skills = [
     "Laravel Developer",
+    "PHP Developer",
     "React.js Developer",
+    "JavaScript Developer",
     "Full Stack Developer",
     "RESTful API Developer",
-    "JavaScript Developer",
-    "PHP Developer",
+    "Whatsapp Business Api",
   ]
 
   // Check if device is mobile
@@ -92,7 +93,7 @@ export default function HeroSection() {
   }, [typedText, currentSkillIndex, isDeleting, typingSpeed, skills])
 
   return (
-    <section className="pt-24 md:pt-32 pb-16 md:pb-20 min-h-screen flex items-center relative overflow-hidden">
+    <section id="heroSection" className="pt-24 md:pt-32 pb-16 md:pb-20 min-h-screen flex items-center relative overflow-hidden">
       {/* Enhanced animated background with 3D perspective */}
       <div className="absolute top-0 right-0 bottom-0 w-full h-full z-0 perspective-1000">
         <div className="absolute top-0 left-0 w-full h-full bg-gradient-radial from-green-500/10 via-transparent to-transparent animate-pulse-slow"></div>
@@ -140,7 +141,9 @@ export default function HeroSection() {
       {/* Social Links Sidebar - Hidden on mobile */}
       <div className="fixed left-0 top-1/2 -translate-y-1/2 flex flex-col items-center z-10 hidden md:flex">
         <div className="w-10 h-64 bg-[#0a1120]/80 backdrop-blur-sm border-r border-green-500/20 flex flex-col items-center justify-center gap-6 social-sidebar">
-          <a href="#" target="_blank" aria-label="GitHub" className="social-icon" rel="noreferrer">
+          <a href="https://github.com/ahsakib" target="_blank" aria-label="GitHub" className="social-icon" rel="noreferrer"
+
+          >
             <div className="text-gray-400 hover:text-green-500 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -157,7 +160,7 @@ export default function HeroSection() {
               </svg>
             </div>
           </a>
-          <a href="#" target="_blank" aria-label="LinkedIn" className="social-icon" rel="noreferrer">
+          <a href="https://www.linkedin.com/in/anowar-shakib" target="_blank" aria-label="LinkedIn" className="social-icon" rel="noreferrer">
             <div className="text-gray-400 hover:text-green-500 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -193,7 +196,7 @@ export default function HeroSection() {
               </svg>
             </div>
           </a>
-          <a href="#" aria-label="Email" className="social-icon">
+          <a href="mailto:ahshakib572@gmail.com" aria-label="Email" className="social-icon">
             <div className="text-gray-400 hover:text-green-500 transition-all duration-300 transform hover:scale-125 hover:rotate-12">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -224,12 +227,15 @@ export default function HeroSection() {
             <span className="text-gradient">Anowar Shakib</span>
           </h1>
           <div className="flex flex-wrap items-center mb-2">
-            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-300 mr-2">Junior</h2>
+            <h2 className="text-xl sm:text-2xl md:text-3xl text-gray-300 mr-2">Professional</h2>
             <span className="text-xl sm:text-2xl md:text-3xl text-green-500 typing-cursor">{typedText}</span>
           </div>
           <p className="text-gray-400 mb-6 md:mb-8 animate-fadeIn animation-delay-500">Laravel & React</p>
           <div className="flex flex-wrap gap-4 animate-fadeIn animation-delay-1000">
-            <button className="bg-green-500 hover:bg-green-600 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow flex items-center gap-2 group">
+            <a
+              href="/public/pdf/shakib_cv.pdf"
+              download="anowar-shakib.pdf"
+              className="bg-green-500 hover:bg-green-600 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow flex items-center gap-2 group">
               Get Resume
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -247,8 +253,10 @@ export default function HeroSection() {
                 <polyline points="7 10 12 15 17 10"></polyline>
                 <line x1="12" y1="15" x2="12" y2="3"></line>
               </svg>
-            </button>
-            <button className="border border-green-500 text-green-500 hover:bg-green-500/10 px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group">
+            </a>
+            <a
+              href="#about"
+              className="border border-green-500 text-green-500 hover:bg-green-500/10 px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 flex items-center gap-2 group">
               About Me
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -266,7 +274,7 @@ export default function HeroSection() {
                 <line x1="12" y1="8" x2="12" y2="16"></line>
                 <line x1="8" y1="12" x2="16" y2="12"></line>
               </svg>
-            </button>
+            </a>
           </div>
 
           {/* Social links for mobile only */}
@@ -338,7 +346,7 @@ export default function HeroSection() {
 
           {/* Enhanced scroll indicator with animation */}
           <div
-            className="absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce animation-delay-2000 cursor-pointer hover:scale-110 transition-transform"
+            className="scroll-indicator absolute bottom-10 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce animation-delay-2000 cursor-pointer hover:scale-110 transition-transform"
             onClick={() => {
               const aboutSection = document.getElementById("about")
               if (aboutSection) {

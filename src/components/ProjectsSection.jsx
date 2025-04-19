@@ -34,52 +34,64 @@ export default function ProjectsSection() {
     {
       title: "Droptienda – Laravel CMS Platform",
       description: "A drag-and-drop CMS with full e-commerce functionality, built for entrepreneurs and dropshippers.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/droptienda.png",
       category: "web",
-      technologies: ["Laravel", "jQuery", "Ajax", "Bootstrap"],
+      technologies: ["Laravel","PHP","jQuery", "Ajax", "Bootstrap","Rest Api"],
       featured: true,
+      view_link: "https://www.dropmatix.com/droptienda",
+      github: "#",
     },
     {
       title: "TextCRM – WhatsApp CRM",
       description:
         "A centralized WhatsApp chat solution for businesses with chatbot flows, auto-reply, and media sharing.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/textcrm.png",
       category: "web",
-      technologies: ["Laravel", "React.js", "Inertia.js", "Tailwind"],
+      technologies: ["Laravel", "React.js", "Inertia.js", "Tailwind","Whatsapp Api","Graph Api"],
       featured: true,
+      view_link: "https://textcrm.chat/",
+      github: "#",
     },
     {
       title: "Personal Blog",
       description:
         "A personal blog built with Laravel and Vue.js to share my thoughts and experiences in web development.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/personal_blog.png",
       category: "web",
       technologies: ["Laravel", "Vue.js", "Tailwind CSS"],
       featured: false,
+      view_link: "#",
+      github: "#",
     },
     {
       title: "Task Management App",
       description: "A simple task management application with drag-and-drop functionality and user authentication.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/task_management.png",
       category: "web",
       technologies: ["React.js", "Firebase", "Material UI"],
       featured: false,
+      view_link: "#",
+      github: "#",
     },
     {
       title: "Weather Dashboard",
       description: "A weather dashboard that displays current weather conditions and forecasts for multiple locations.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/weather.png",
       category: "others",
       technologies: ["JavaScript", "OpenWeather API", "Chart.js"],
       featured: false,
+      view_link: "#",
+      github: "#",
     },
     {
       title: "Portfolio Website",
       description: "A personal portfolio website to showcase my projects and skills.",
-      image: "/placeholder.svg?height=200&width=300",
+      image: "/public/images/portfolio.png",
       category: "others",
-      technologies: ["Next.js", "Tailwind CSS", "Framer Motion"],
+      technologies: ["React.Js", "Tailwind CSS"],
       featured: true,
+      view_link: "#",
+      github: "https://github.com/ahsakib/portfolio-website",
     },
   ]
 
@@ -168,7 +180,8 @@ export default function ProjectsSection() {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0f1a2b] to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
                 <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                   <a
-                    href="#"
+                    href={project?.view_link}
+                    target="_blank"
                     className="bg-green-500 text-black rounded-full p-2 mx-2 transform translate-y-4 group-hover:translate-y-0 transition-all duration-300 hover:bg-green-600 hover:scale-110"
                     title="View Project"
                   >
@@ -227,7 +240,7 @@ export default function ProjectsSection() {
                 <p className="text-gray-300 text-xs md:text-sm mb-4 md:mb-6">{project.description}</p>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href={project?.github}
                     target="_blank"
                     className="text-gray-400 hover:text-green-500 transition-colors transform hover:scale-110"
                     rel="noreferrer"
@@ -247,7 +260,7 @@ export default function ProjectsSection() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href={project?.view_link}
                     target="_blank"
                     className="text-gray-400 hover:text-green-500 transition-colors transform hover:scale-110"
                     rel="noreferrer"
