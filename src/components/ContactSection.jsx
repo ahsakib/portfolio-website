@@ -159,7 +159,7 @@ export default function ContactSection() {
                 <h4 className="text-gray-300 mb-4 text-sm md:text-base">Find me on</h4>
                 <div className="flex gap-4">
                   <a
-                    href="#"
+                    href="https://github.com/ahsakib" target="_blank"
                     className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                   >
                     <svg
@@ -177,7 +177,7 @@ export default function ContactSection() {
                     </svg>
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/anowar-shakib" target="_blank"
                     className="w-9 h-9 md:w-10 md:h-10 rounded-full bg-[#0a1120] border border-green-500/20 flex items-center justify-center text-gray-400 hover:text-green-500 hover:border-green-500/50 transition-all duration-300 transform hover:scale-110 hover:rotate-12"
                   >
                     <svg
