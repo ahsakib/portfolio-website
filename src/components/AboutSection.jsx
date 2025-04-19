@@ -67,7 +67,7 @@ export default function AboutSection() {
             <div className="relative w-full max-w-xs sm:max-w-sm md:max-w-md mx-auto aspect-square overflow-hidden rounded-2xl border-2 border-green-500/20 p-2 hover:border-green-500/50 transition-all duration-700">
               <div className="absolute inset-0 bg-gradient-to-br from-green-500/20 to-blue-500/10 rounded-2xl transform group-hover:scale-105 transition-all duration-700"></div>
               <img
-                src="/public/images/my_pic.jpg"
+                src="/images/my_pic.jpg"
                 alt="Anowar Shakib"
                 className="rounded-xl object-cover w-full h-full relative z-10 transform group-hover:scale-[1.02] transition-all duration-700 filter saturate-[1.1] contrast-[1.1]"
               />

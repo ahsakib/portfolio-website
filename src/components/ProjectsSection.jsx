@@ -34,7 +34,7 @@ export default function ProjectsSection() {
     {
       title: "Droptienda – Laravel CMS Platform",
       description: "A drag-and-drop CMS with full e-commerce functionality, built for entrepreneurs and dropshippers.",
-      image: "/public/images/droptienda.png",
+      image: "/images/droptienda.png",
       category: "web",
       technologies: ["Laravel","PHP","jQuery", "Ajax", "Bootstrap","Rest Api"],
       featured: true,
@@ -45,7 +45,7 @@ export default function ProjectsSection() {
       title: "TextCRM – WhatsApp CRM",
       description:
         "A centralized WhatsApp chat solution for businesses with chatbot flows, auto-reply, and media sharing.",
-      image: "/public/images/textcrm.png",
+      image: "/images/textcrm.png",
       category: "web",
       technologies: ["Laravel", "React.js", "Inertia.js", "Tailwind","Whatsapp Api","Graph Api"],
       featured: true,
@@ -56,7 +56,7 @@ export default function ProjectsSection() {
       title: "Personal Blog",
       description:
         "A personal blog built with Laravel and Vue.js to share my thoughts and experiences in web development.",
-      image: "/public/images/personal_blog.png",
+      image: "/images/personal_blog.png",
       category: "web",
       technologies: ["Laravel", "Vue.js", "Tailwind CSS"],
       featured: false,
@@ -66,7 +66,7 @@ export default function ProjectsSection() {
     {
       title: "Task Management App",
       description: "A simple task management application with drag-and-drop functionality and user authentication.",
-      image: "/public/images/task_management.png",
+      image: "/images/task_management.png",
       category: "web",
       technologies: ["React.js", "Firebase", "Material UI"],
       featured: false,
@@ -76,7 +76,7 @@ export default function ProjectsSection() {
     {
       title: "Weather Dashboard",
       description: "A weather dashboard that displays current weather conditions and forecasts for multiple locations.",
-      image: "/public/images/weather.png",
+      image: "/images/weather.png",
       category: "others",
       technologies: ["JavaScript", "OpenWeather API", "Chart.js"],
       featured: false,
@@ -86,7 +86,7 @@ export default function ProjectsSection() {
     {
       title: "Portfolio Website",
       description: "A personal portfolio website to showcase my projects and skills.",
-      image: "/public/images/portfolio.png",
+      image: "/images/portfolio.png",
       category: "others",
       technologies: ["React.Js", "Tailwind CSS"],
       featured: true,

@@ -233,7 +233,7 @@ export default function HeroSection() {
           <p className="text-gray-400 mb-6 md:mb-8 animate-fadeIn animation-delay-500">Laravel & React</p>
           <div className="flex flex-wrap gap-4 animate-fadeIn animation-delay-1000">
             <a
-              href="/public/pdf/shakib_cv.pdf"
+              href="/pdf/shakib_cv.pdf"
               download="anowar-shakib.pdf"
               className="bg-green-500 hover:bg-green-600 text-black px-5 sm:px-6 py-2 sm:py-3 rounded-md transition-all duration-300 transform hover:scale-105 hover:shadow-glow flex items-center gap-2 group">
               Get Resume
